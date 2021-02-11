@@ -7,3 +7,4 @@ src/lib/crud/obj
 .vscode
 .vs
 .DS_Store
+workspace.code-workspace
