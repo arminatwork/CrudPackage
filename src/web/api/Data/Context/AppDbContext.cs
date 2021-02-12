@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using api.Models.Product;
 
 using Crud.BaseContext;
+using api.Models;
 
 namespace api.Data.Context
 {
@@ -16,6 +17,9 @@ namespace api.Data.Context
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Developer> Developers { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -63,6 +67,42 @@ namespace api.Data.Context
                     Price = 0,
                     CreatedAt = DateTimeOffset.Now.AddMinutes(4)
                 });
+            });
+
+            modelBuilder.Entity<Developer>(d =>
+            {
+                d.HasKey(k => k.Id);
+                d.Property(p => p.Name).IsRequired();
+                d.HasData(
+                    new Developer()
+                    {
+                        Id=1,
+                        Name = "Armin",
+                        Age = 17,
+                        Follower = "460"
+                    },
+                    new Developer()
+                    {
+                        Id=2,
+                        Name = "Amir",
+                        Age = 16,
+                        Follower = "60"
+                    },
+                    new Developer()
+                    {
+                        Id=3,
+                        Name = "Parsa",
+                        Age = 20,
+                        Follower = "261"
+                    },
+                    new Developer()
+                    {
+                        Id=4,
+                        Name = "Alireza",
+                        Age = 19,
+                        Follower = "700"
+                    }
+                );
             });
 
             base.OnModelCreating(modelBuilder);
