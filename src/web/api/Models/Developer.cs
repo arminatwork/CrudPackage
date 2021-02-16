@@ -1,4 +1,4 @@
-using api.Data.BaseEntity;
+using Crud.Entity;
 
 namespace api.Models
 {
