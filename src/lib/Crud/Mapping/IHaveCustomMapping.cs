@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace WebFramework.CustomMapping
+namespace Crud.Mapping
 {
     public interface IHaveCustomMapping
     {

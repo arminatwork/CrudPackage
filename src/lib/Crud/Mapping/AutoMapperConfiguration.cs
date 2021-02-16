@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using AutoMapper;
 
-namespace WebFramework.CustomMapping
+namespace Crud.Mapping
 {
     public static class AutoMapperConfiguration
     {

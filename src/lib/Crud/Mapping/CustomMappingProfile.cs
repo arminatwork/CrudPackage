@@ -2,7 +2,7 @@
 
 using AutoMapper;
 
-namespace WebFramework.CustomMapping
+namespace Crud.Mapping
 {
     public class CustomMappingProfile : Profile
     {
