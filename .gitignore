@@ -2,6 +2,7 @@ src/web/api/bin
 src/web/api/obj
 src/web/mvc/bin
 src/web/mvc/obj
+src/web/api/sqlite
 src/lib/crud/bin
 src/lib/crud/obj
 .vscode
